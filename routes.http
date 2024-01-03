@@ -1,0 +1,34 @@
+# @name get-tasks
+GET http://localhost:3333/tasks
+
+###
+
+# @name create-task
+POST http://localhost:3333/tasks
+Content-Type: application/json
+
+{
+  "title": "Title example",
+  "description": "Description example"
+}
+
+###
+
+# @name update-task
+PUT http://localhost:3333/tasks/:id
+Content-Type: application/json
+
+{
+  "title": "Another title example",
+  "description": "Another description example"
+}
+
+###
+
+# @name mark-task-as-completed
+PATCH http://localhost:3333/tasks/:id/complete
+
+###
+
+# @name delete-task
+DELETE http://localhost:3333/tasks/:id
